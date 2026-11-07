@@ -1,0 +1,61 @@
+.Contactame {
+    padding: @space-xl @space-md;
+
+    .Contactame-tarjeta {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: @space-lg;
+        background: @color-surface;
+        border: 1px solid @color-surface-2;
+        border-radius: @radius;
+        box-shadow: @shadow;
+    }
+
+    h1 {
+        margin: 0;
+        color: @color-primary-light;
+    }
+
+    .Contactame-subtitulo {
+        display: block;
+        margin-bottom: @space-md;
+        color: @color-muted;
+        font-weight: 600;
+    }
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: @space-sm;
+
+    label {
+        font-weight: 600;
+    }
+
+    input,
+    textarea {
+        padding: 0.7rem;
+        font: inherit;
+        color: @color-text;
+        background: @color-bg;
+        border: 1px solid @color-surface-2;
+        border-radius: @radius;
+
+        &:focus {
+            outline: 2px solid @color-primary;
+        }
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .botones-contacto {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @space-md;
+        margin-top: @space-sm;
+    }
+}

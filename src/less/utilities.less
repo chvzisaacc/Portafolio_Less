@@ -1,0 +1,49 @@
+.flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button(@bg: @color-primary, @color: @color-white) {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: @bg;
+    color: @color;
+    border: 0;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: @radius;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.2s;
+
+    &:hover {
+        filter: brightness(1.15);
+        transform: translateY(-2px);
+    }
+}
+
+.tablet-up(@rules) {
+    @media (min-width: @bp-tablet) {
+        @rules();
+    }
+}
+
+.desktop-up(@rules) {
+    @media (min-width: @bp-desktop) {
+        @rules();
+    }
+}
+
+.btn {
+    .button();
+}
+
+.btn-whatsapp {
+    .button(@color-whatsapp, @color-bg);
+}
+
+.btn-contacto {
+    .button();
+}
